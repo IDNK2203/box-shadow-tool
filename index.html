@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Shadow Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="display">
+      <div id="box"></div>
+    </div>
+    <div id="control_panel">
+      <div class="settings">
+        <div class="setting">
+          <label for="x_offet">X offset</label>
+          <input class="px_setting" type="number" id="x_offset" >
+        </div> 
+        <div class="setting">
+          <label for="y_offset" >Y offset</label>
+          <input class="px_setting" type="number" id="y_offset">
+        </div>
+        <div class="setting">
+          <label for="blur_radius">Blur Radius</label>
+          <input class="px_setting" type="number" id="blur_radius">
+        </div>
+        <div class="setting">
+          <label for="blur_spread">Blur Spread</label>
+          <input class="px_setting" type="number" id="blur_spread">
+        </div>
+        <div id="color_settings">
+          <div class="setting">
+            <label for="background_color">Background color</label>
+            <input class="color_setting" type="color" id="background_color">
+          </div>
+          <div class="setting">
+            <label for="box_color">Box color</label>
+            <input class="color_setting" type="color" id="box_color">
+          </div>
+          <div class="setting">
+            <label for="shadow_color">Shadow Color</label>
+            <input class="color_setting" type="color" id="shadow_color">
+          </div>          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
