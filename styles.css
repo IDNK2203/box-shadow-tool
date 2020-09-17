@@ -6,6 +6,14 @@
 :root{
 color: salmon;
 font-size: 10px;
+font-family: sans-serif;
+--x_offset : 3 ;
+--y_offset : 3 ;
+--blur_radius : 6 ;
+--blur_spread : 3 ;
+--background_color : #eaf7f6 ;
+--box_color : #05a1c9 ;
+--shadow_color : #0e0d0d ;
 }
 .container{
   width: 100%;
@@ -15,7 +23,7 @@ font-size: 10px;
 }
 #display{
   width: 100%;
-  background: seagreen;
+  background: var(--background_color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +31,14 @@ font-size: 10px;
 #box{
   width: 200px;
   height: 200px;
-  background: salmon;
+  background:var(--box_color) ;
+  box-shadow: 
+  calc(var(--x_offset) * 1px)
+  calc(var(--y_offset) * 1px)
+  calc(var(--blur_radius) * 1px)
+  calc(var(--blur_spread) * 1px)
+  var(--shadow_color)
+  ;
 }
 #control_panel{
   min-width: 300px;
@@ -33,22 +48,31 @@ font-size: 10px;
   align-items: center;
   font-size: 2rem;
 }
+.settings{
+  border-radius:5px;    
+}
 .settings , .color_settings {
   display: flex;
   border:1px solid white;
   padding: 1rem;
   flex-direction: column;
 }
-.color_settings{
-  padding: 2rem  0;
+#color_settings{
+  padding: 1rem  0;
+  border-top:1px solid white ;
 }
 .setting{
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
   margin: 1rem 0;
-  border-bottom:1px solid white ;
 }
 input{
+  height: 25px;
   width: 150px;
+}
+
+input:not([type="color"]){
+  border-radius:5px;  
+  padding: 1rem;
 }
